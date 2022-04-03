@@ -21,11 +21,27 @@ GPS Points for Each Flight:
 
 ## "angular_accel.m"
 Run this function in MATLAB to compare the angular excelerations in the pitch and yaw axis.
-ex/. angular_accel('flight_1_matlab.csv')
+ex/ angular_accel('flight_1_matlab.csv')
+
+## "dome_heading.csv"
+## "dome_time.csv"
+These files came from the Pixhawk flight controller after the dome test flight. To get these files use the convert log to matlab function in the ground control software Mission Planner, and then run the following script. 
+
+## "get_domedata.m"
+Run this function in MATLAB to create the two files that are above. The input to this function is the MATLAB file from Mission Planner. ex/ get_domedata('00000050.BIN-454297.mat')
 
 ## "compare_heading.m"
-Run this function in MATLAB to compare the headings between flights.
-ex/ [p,h, median_STD_alaska, median_STD_dome, percent_difference]=compare_heading('00000050.BIN-454297.mat','flight_3_matlab.csv')
+Run this function in MATLAB to compare the headings between flights. The 
+ex/ [p,h, median_STD_alaska, median_STD_dome, percent_difference]=compare_heading('dome_heading.csv','dome_time.csv','flight_3_matlab.csv')
 
 ## "results_section.m"
 Run this script in MATLAB to plot endurance vs wind, course correction vs wind, find averages (endurance, wind, course correction, and their experimental errors). Data from flight logs are inputed into arrays in the first section. 
+
+# Additional Functions
+These functions were not used in my thesis calculations but they were useful in conceptualizing the data.
+
+## "path_plot"
+This function displays the flight path in 2D and 3D and calculates the total distance traveled in the flight. ex/ path_plot('flight_3_matlab.csv')
+
+## "blimp_simulator
+This function is similar to "path plot", but it shows position on top of the 2D map and the 3D map changes to the camera view of the blimp which varies with the position. ex/ blimp_simulator('flight_3_matlab.csv')
