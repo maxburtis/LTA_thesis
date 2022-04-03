@@ -28,4 +28,4 @@ Run this function in MATLAB to compare the headings between flights.
 ex/ [p,h, median_STD_alaska, median_STD_dome, percent_difference]=compare_heading('00000050.BIN-454297.mat','flight_3_matlab.csv')
 
 ## "results_section.m"
-Run this function in MATLAB to plot endurance vs wind, course correction vs wind, find averages (endurance, wind, course correction, and their experimental errors). Data from flight logs are inputed into arrays in the first section. 
+Run this script in MATLAB to plot endurance vs wind, course correction vs wind, find averages (endurance, wind, course correction, and their experimental errors). Data from flight logs are inputed into arrays in the first section. 
