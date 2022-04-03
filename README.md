@@ -1,5 +1,5 @@
 # LTA_thesis
-This repository contains the code and data that was used in my undergraduate thesis where I assessed the performance of a small blimp for remote sensing in test flights on glaciers in the Juneau Icefield, Alaska. 
+This repository contains the MATLAB code and data that was used in my undergraduate thesis where I assessed the performance of a small blimp for remote sensing in flights on glaciers in the Juneau Icefield, Alaska. 
 
 My thesis was submitted to the University of Maine Honors College in April 2022. 
 
