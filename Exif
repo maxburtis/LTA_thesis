@@ -1,0 +1,1 @@
+C:\Program Files\exiftool>exiftool -filename -gpslatitude -gpslongitude -gpsaltitude -createdate -relativealtitude -T -n -csv C:\Users\maxbu\OneDrive\Desktop\blimp_1 >C:\Users\maxbu\OneDrive\Desktop\blimp_1out.csv
