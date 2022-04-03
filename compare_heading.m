@@ -1,13 +1,12 @@
-function [p,h, median_STD_alaska, median_STD_dome, percent_difference]=compare_heading(domedata,alaskadata)
+function [p,h, median_STD_alaska, median_STD_dome, percent_difference]=compare_heading(dome_heading,dome_time,alaskadata)
     % import and process data
     close all
     clc
     
-    dome_data = load(domedata,'ATT_label','ATT'); %importing the raw data (dome)
-    dome_time=(1e-6)*dome_data.ATT(:,2); %pull in time and convert to seconds
-    dome_time=dome_time-dome_time(1); %zero the time
+    dome_time=csvread(dome_time)*(1e-6);%pull in time and convert to second
+    dome_time=(dome_time-dome_time(1)); %zero the time 
     dome_time=downsample(dome_time,63); %downsample frequency to one point every 3s
-    dome_heading=[dome_data.ATT(:,8)]; %pull in headings
+    dome_heading=csvread(dome_heading); %pull in headings
     dome_heading=downsample(dome_heading,63); %downsample frequency to one point every 3s
     dome_heading_uncert=0.01;  %Uncertainty in a Digital Measuring Device is equal to the smallest increment 
     
