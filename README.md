@@ -37,6 +37,10 @@ ex/ [p,h, median_STD_alaska, median_STD_dome, percent_difference]=compare_headin
 ## "results_section.m"
 Run this script in MATLAB to plot endurance vs wind, course correction vs wind, find averages (endurance, wind, course correction, and their experimental errors). Data from flight logs are inputed into arrays in the first section. 
 
+## "heading_uncertainty.m"
+## "accel_uncertainty.m"
+These MATLAB scripts show the uncertainty calculations used to calculate heading uncertainty and acceleration uncertainty in my thesis. They are performed in accordance with ASME measurement uncertainty standards shown here: https://doi.org/10.1115/1.3242450
+
 # Additional Functions
 These functions were not used in my thesis calculations but they were useful in conceptualizing the data.
 
